@@ -1,7 +1,10 @@
-# Tauri + React + Typescript
+# MDLoaderCompanion
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+## To-Dos
+- [ ] [Frontend] finish the whole frontend design
+- [ ] [Backend] can interact with the local file
+... more to-dos
 
-## Recommended IDE Setup
+## Suggested IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
