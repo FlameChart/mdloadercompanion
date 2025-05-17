@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import { ModeToggle } from '@/components/mode-toggle'
 import {
     Sidebar,
@@ -13,8 +12,6 @@ import {
 import { FileCog, Home, Music } from 'lucide-react'
 
 function SidebarWrapper() {
-    const navigate = useNavigate()
-
     return (
         <Sidebar className="h-screen" collapsible="none">
             <SidebarHeader>
@@ -52,9 +49,7 @@ function SidebarWrapper() {
                             </a>
                         </SidebarMenuButton>
                     </SidebarGroupContent>
-                    <SidebarGroupLabel>
-                        Tools
-                    </SidebarGroupLabel>
+                    <SidebarGroupLabel>Tools</SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenuButton asChild>
                             <a href="/tools/loader-logs">

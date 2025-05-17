@@ -12,9 +12,12 @@
     "app": {
         "windows": [
             {
-                "title": "mdloadercompanion",
-                "width": 800,
-                "height": 600
+                "title": "MuseDash Loader Companion",
+                "decorations": false,
+                "width": 900,
+                "height": 600,
+                "minWidth": 800,
+                "minHeight": 480
             }
         ],
         "security": {

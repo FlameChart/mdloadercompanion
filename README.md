@@ -1,9 +1,10 @@
 # MDLoaderCompanion
 
 ## To-Dos
+
 - [ ] [Frontend] finish the whole frontend design
 - [ ] [Backend] can interact with the local file
-... more to-dos
+      ... more to-dos
 
 ## Suggested IDE Setup
 
