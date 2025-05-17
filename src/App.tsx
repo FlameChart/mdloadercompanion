@@ -1,36 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { invoke } from '@tauri-apps/api/core'
-import './App.css'
-import {
-    Sidebar,
-    SidebarHeader,
-    SidebarContent,
-    SidebarGroup,
-    SidebarFooter,
-} from './components/ui/sidebar'
+import '@/App.css'
+import RootLayout from './layouts/root-layout'
+import { Routes, Route } from 'react-router-dom'
+import Home from '@/pages/home'
+import Mods from '@/pages/mods'
+import Songs from '@/pages/songs'
+import Tools from '@/pages/tools'
+import LoaderLogs from '@/pages/loader-logs'
 
 function App() {
-    const [greetMsg, setGreetMsg] = useState('')
-    const [name, setName] = useState('')
-
-    async function greet() {
-        // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-        setGreetMsg(await invoke('greet', { name }))
-    }
-
     return (
-        <div className="flex h-screen">
-            <Sidebar>
-                <SidebarHeader>MDLoader Companion</SidebarHeader>
-                <SidebarContent>
-                    <SidebarGroup>Example Group 1</SidebarGroup>
-                    <SidebarGroup>Example Group 2</SidebarGroup>
-                </SidebarContent>
-                <SidebarFooter>Example Footer Label</SidebarFooter>
-            </Sidebar>
-            <main className="flex-grow container"></main>
-        </div>
+        <RootLayout>
+            <main className="flex-1 flex-grow container min-h-0">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/mods" element={<Mods />} />
+                    <Route path="/songs" element={<Songs />} />
+                    <Route path="/tools" element={<Tools />} />
+                    <Route path="/tools/loader-logs" element={<LoaderLogs />} />
+                </Routes>
+            </main>
+        </RootLayout>
     )
 }
 

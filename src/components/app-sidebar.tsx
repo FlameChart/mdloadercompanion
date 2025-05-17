@@ -1,18 +1,16 @@
 import { useNavigate } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
 import { ModeToggle } from '@/components/mode-toggle'
 import {
     Sidebar,
     SidebarHeader,
     SidebarContent,
     SidebarGroup,
-    SidebarSeparator,
     SidebarFooter,
     SidebarGroupLabel,
-    SidebarMenuItem,
     SidebarMenuButton,
+    SidebarGroupContent,
 } from '@/components/ui/sidebar'
-import { Home } from 'lucide-react'
+import { FileCog, Home, Music } from 'lucide-react'
 
 function SidebarWrapper() {
     const navigate = useNavigate()
@@ -21,36 +19,56 @@ function SidebarWrapper() {
         <Sidebar className="h-screen" collapsible="none">
             <SidebarHeader>
                 <SidebarGroup>
-                    <p>MuseDash Loader Companion</p>
+                    <span>MuseDash Loader Companion</span>
                 </SidebarGroup>
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>
-                    <SidebarMenuItem key="Home">
+                    <SidebarGroupLabel>
+                        <span>Navigation</span>
+                    </SidebarGroupLabel>
+                    <SidebarGroupContent>
                         <SidebarMenuButton asChild>
                             <a href="/">
                                 <Home />
                                 <span>Home</span>
                             </a>
                         </SidebarMenuButton>
-                    </SidebarMenuItem>
+                    </SidebarGroupContent>
                     <SidebarGroupLabel>
-
+                        <span>Custom Content Management</span>
                     </SidebarGroupLabel>
-                    <Button
-                        variant="ghost"
-                        className="w-full justify-start"
-                        onClick={() => navigate('/page1')}
-                    >
-                        Page 1
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        className="w-full justify-start"
-                        onClick={() => navigate('/page2')}
-                    >
-                        Page 2
-                    </Button>
+                    <SidebarGroupContent>
+                        <SidebarMenuButton asChild>
+                            <a href="/mods">
+                                <FileCog />
+                                <span>Mods</span>
+                            </a>
+                        </SidebarMenuButton>
+                        <SidebarMenuButton asChild>
+                            <a href="/songs">
+                                <Music />
+                                <span>Songs</span>
+                            </a>
+                        </SidebarMenuButton>
+                    </SidebarGroupContent>
+                    <SidebarGroupLabel>
+                        Tools
+                    </SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenuButton asChild>
+                            <a href="/tools/loader-logs">
+                                <FileCog />
+                                <span>Loader Logs</span>
+                            </a>
+                        </SidebarMenuButton>
+                        <SidebarMenuButton asChild>
+                            <a href="/tools">
+                                <Music />
+                                <span>All Tools</span>
+                            </a>
+                        </SidebarMenuButton>
+                    </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
             <SidebarFooter>
