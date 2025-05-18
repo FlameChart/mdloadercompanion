@@ -16,7 +16,9 @@ function SidebarWrapper() {
         <Sidebar className="h-screen" collapsible="none">
             <SidebarHeader>
                 <SidebarGroup>
-                    <span>MuseDash Loader Companion</span>
+                    <span>
+                        MuseDash <br /> Loader Companion
+                    </span>
                 </SidebarGroup>
             </SidebarHeader>
             <SidebarContent>

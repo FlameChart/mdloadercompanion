@@ -1,8 +1,10 @@
+import { StyleH3 } from "@/components/typography"
+
 function tools() {
     return (
-        <div>
-            <h1>Tools</h1>
-        </div>
+        <main>
+            <StyleH3>Tools</StyleH3>
+        </main>
     )
 }
 

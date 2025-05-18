@@ -1,9 +1,11 @@
+import { StyleH3 } from "@/components/typography"
+
 function Songs() {
     return (
-        <div>
-            <h1>Page 2</h1>
+        <main>
+            <StyleH3>Page 2</StyleH3>
             <p>This is the second example page.</p>
-        </div>
+        </main>
     )
 }
 

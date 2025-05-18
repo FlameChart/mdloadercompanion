@@ -1,8 +1,10 @@
+import { StyleH3 } from "@/components/typography"
+
 function LoaderLogs() {
     return (
-        <div>
-            <h1>Loader Logs</h1>
-        </div>
+        <main>
+            <StyleH3>Loader Logs</StyleH3>
+        </main>
     )
 }
 
