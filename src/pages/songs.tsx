@@ -3,7 +3,7 @@ import { StyleH3 } from "@/components/typography"
 function Songs() {
     return (
         <main>
-            <StyleH3>Page 2</StyleH3>
+            <StyleH3>Songs</StyleH3>
             <p>This is the second example page.</p>
         </main>
     )

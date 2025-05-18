@@ -5,7 +5,7 @@ import Home from '@/pages/home'
 import Mods from '@/pages/mods'
 import Songs from '@/pages/songs'
 import Tools from '@/pages/tools'
-import LoaderLogs from '@/pages/loader-logs'
+import LoaderLogs from '@/pages/tools/loader-logs'
 
 function App() {
     return (

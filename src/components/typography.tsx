@@ -46,6 +46,21 @@ const StyleH3 = React.forwardRef<
 ))
 StyleH3.displayName = 'StyleH3'
 
+const StyleH4 = React.forwardRef<
+    HTMLHeadingElement,
+    React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+    <h4
+        ref={ref}
+        className={cn(
+            'scroll-m-20 text-xl font-semibold tracking-tight',
+            className
+        )}
+        {...props}
+    />
+))
+StyleH4.displayName = 'StyleH4'
+
 const StyleP = React.forwardRef<
     HTMLParagraphElement,
     React.HTMLAttributes<HTMLParagraphElement>
@@ -175,6 +190,7 @@ export {
     StyleH1,
     StyleH2,
     StyleH3,
+    StyleH4,
     StyleP,
     StyleBlockquote,
     StyleList,
