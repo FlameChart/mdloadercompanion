@@ -1,4 +1,4 @@
-import { StyleH3 } from "@/components/typography"
+import { StyleH3 } from '@/components/typography'
 
 function tools() {
     return (

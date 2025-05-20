@@ -1,4 +1,4 @@
-import { StyleH4 } from "@/components/typography"
+import { StyleH4 } from '@/components/typography'
 
 function AllMods() {
     return (
