@@ -1,4 +1,4 @@
-import { ModeToggle } from '@/components/mode-toggle'
+import { ModeToggle } from '@/components/mode-toggle';
 import {
     Sidebar,
     SidebarHeader,
@@ -8,8 +8,8 @@ import {
     SidebarGroupLabel,
     SidebarMenuButton,
     SidebarGroupContent,
-} from '@/components/ui/sidebar'
-import { FileCog, Home, Music } from 'lucide-react'
+} from '@/components/ui/sidebar';
+import { FileCog, Home, Music } from 'lucide-react';
 
 function SidebarWrapper() {
     return (
@@ -72,7 +72,7 @@ function SidebarWrapper() {
                 <ModeToggle />
             </SidebarFooter>
         </Sidebar>
-    )
+    );
 }
 
-export default SidebarWrapper
+export default SidebarWrapper;

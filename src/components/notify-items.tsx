@@ -1,27 +1,27 @@
 interface Notification {
-    title: string
-    description: string
-    status: 'success' | 'error' | 'working' | 'info'
+    title: string;
+    description: string;
+    status: 'success' | 'error' | 'working' | 'info';
 }
 
 interface NotifyItemsProps {
-    notifications: Notification[]
+    notifications: Notification[];
 }
 
 function NotifyItems({ notifications }: NotifyItemsProps) {
     const getStatusColor = (status: Notification['status']) => {
         switch (status) {
             case 'success':
-                return 'bg-green-500'
+                return 'bg-green-500';
             case 'error':
-                return 'bg-red-500'
+                return 'bg-red-500';
             case 'working':
-                return 'bg-yellow-500'
+                return 'bg-yellow-500';
             case 'info':
             default:
-                return 'bg-sky-500'
+                return 'bg-sky-500';
         }
-    }
+    };
 
     return (
         <>
@@ -32,7 +32,7 @@ function NotifyItems({ notifications }: NotifyItemsProps) {
                 >
                     <span
                         className={`flex h-2 w-2 translate-y-1 rounded-full ${getStatusColor(
-                            notification.status
+                            notification.status,
                         )}`}
                     />
                     <div className="space-y-1">
@@ -46,7 +46,7 @@ function NotifyItems({ notifications }: NotifyItemsProps) {
                 </div>
             ))}
         </>
-    )
+    );
 }
 
-export default NotifyItems
+export default NotifyItems;

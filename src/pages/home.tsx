@@ -1,13 +1,13 @@
-import { StyleH3 } from '@/components/typography'
-import { Button } from '@/components/ui/button'
+import { StyleH3 } from '@/components/typography';
+import { Button } from '@/components/ui/button';
 import {
     Card,
     CardContent,
     CardDescription,
     CardHeader,
     CardTitle,
-} from '@/components/ui/card'
-import NotifyItems, { Notification } from '@/components/notify-items'
+} from '@/components/ui/card';
+import NotifyItems, { Notification } from '@/components/notify-items';
 
 const serverStatusNotifications: Notification[] = [
     {
@@ -22,7 +22,7 @@ const serverStatusNotifications: Notification[] = [
         title: 'GitHub DataSource',
         description: 'checking...',
     },
-]
+];
 
 function Home() {
     return (
@@ -101,7 +101,7 @@ function Home() {
                 </div>
             </main>
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;

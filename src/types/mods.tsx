@@ -1,20 +1,20 @@
 // the content here are doing nothings lol, i might remove it later.
 
 type Mods = {
-    id: string
-    name: string
-    version: string
-    developer: string
-    linkDownload: string
-    linkHomepage: string
-    configFile: string
-    gameVersion: string[]
-    description: string
-    dependMods: string[]
-    dependLibs: string[]
-    conflictMods: string[]
-    sha256: string
-}
+    id: string;
+    name: string;
+    version: string;
+    developer: string;
+    linkDownload: string;
+    linkHomepage: string;
+    configFile: string;
+    gameVersion: string[];
+    description: string;
+    dependMods: string[];
+    dependLibs: string[];
+    conflictMods: string[];
+    sha256: string;
+};
 
 export const mockModData: Mods[] = [
     {
@@ -48,4 +48,4 @@ export const mockModData: Mods[] = [
         conflictMods: [],
         sha256: 'e47d28fe2545d80b0865b24af563ab38e043d2718023028a91de1b6e87b2e370',
     },
-]
+];

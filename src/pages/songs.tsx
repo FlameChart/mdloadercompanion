@@ -1,4 +1,4 @@
-import { StyleH3 } from '@/components/typography'
+import { StyleH3 } from '@/components/typography';
 
 function Songs() {
     return (
@@ -6,7 +6,7 @@ function Songs() {
             <StyleH3>Songs</StyleH3>
             <p>This is the second example page.</p>
         </main>
-    )
+    );
 }
 
-export default Songs
+export default Songs;

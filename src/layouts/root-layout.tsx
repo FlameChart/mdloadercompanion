@@ -1,9 +1,9 @@
-import AppSidebar from '@/components/app-sidebar'
-import { SidebarProvider } from '../components/ui/sidebar'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import AppSidebar from '@/components/app-sidebar';
+import { SidebarProvider } from '../components/ui/sidebar';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface SidebarWrapperProps {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 function SidebarWrapper({ children }: SidebarWrapperProps) {
@@ -14,7 +14,7 @@ function SidebarWrapper({ children }: SidebarWrapperProps) {
                 {children}
             </ScrollArea>
         </SidebarProvider>
-    )
+    );
 }
 
-export default SidebarWrapper
+export default SidebarWrapper;

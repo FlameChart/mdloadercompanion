@@ -1,8 +1,8 @@
-import { StyleH3 } from '@/components/typography'
+import { StyleH3 } from '@/components/typography';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import AllMods from './mods/all-mods'
-import InstalledMods from './mods/installed-mods'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import AllMods from './mods/all-mods';
+import InstalledMods from './mods/installed-mods';
 
 function Mods() {
     return (
@@ -22,7 +22,7 @@ function Mods() {
                 </TabsContent>
             </Tabs>
         </main>
-    )
+    );
 }
 
-export default Mods
+export default Mods;

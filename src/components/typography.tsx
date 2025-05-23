@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { cn } from '@/lib/utils'
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 
 const StyleH1 = React.forwardRef<
     HTMLHeadingElement,
@@ -9,12 +9,12 @@ const StyleH1 = React.forwardRef<
         ref={ref}
         className={cn(
             'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleH1.displayName = 'StyleH1'
+));
+StyleH1.displayName = 'StyleH1';
 
 const StyleH2 = React.forwardRef<
     HTMLHeadingElement,
@@ -24,12 +24,12 @@ const StyleH2 = React.forwardRef<
         ref={ref}
         className={cn(
             'mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleH2.displayName = 'StyleH2'
+));
+StyleH2.displayName = 'StyleH2';
 
 const StyleH3 = React.forwardRef<
     HTMLHeadingElement,
@@ -39,12 +39,12 @@ const StyleH3 = React.forwardRef<
         ref={ref}
         className={cn(
             'mt-8 scroll-m-20 text-2xl font-semibold tracking-tight',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleH3.displayName = 'StyleH3'
+));
+StyleH3.displayName = 'StyleH3';
 
 const StyleH4 = React.forwardRef<
     HTMLHeadingElement,
@@ -54,12 +54,12 @@ const StyleH4 = React.forwardRef<
         ref={ref}
         className={cn(
             'scroll-m-20 text-xl font-semibold tracking-tight',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleH4.displayName = 'StyleH4'
+));
+StyleH4.displayName = 'StyleH4';
 
 const StyleP = React.forwardRef<
     HTMLParagraphElement,
@@ -70,8 +70,8 @@ const StyleP = React.forwardRef<
         className={cn('leading-7 [&:not(:first-child)]:mt-6', className)}
         {...props}
     />
-))
-StyleP.displayName = 'StyleP'
+));
+StyleP.displayName = 'StyleP';
 
 const StyleBlockquote = React.forwardRef<
     HTMLQuoteElement,
@@ -82,8 +82,8 @@ const StyleBlockquote = React.forwardRef<
         className={cn('mt-6 border-l-2 pl-6 italic', className)}
         {...props}
     />
-))
-StyleBlockquote.displayName = 'StyleBlockquote'
+));
+StyleBlockquote.displayName = 'StyleBlockquote';
 
 const StyleList = React.forwardRef<
     HTMLUListElement,
@@ -94,40 +94,40 @@ const StyleList = React.forwardRef<
         className={cn('my-6 ml-6 list-disc [&>li]:mt-2', className)}
         {...props}
     />
-))
-StyleList.displayName = 'StyleList'
+));
+StyleList.displayName = 'StyleList';
 
 const StyleListItem = React.forwardRef<
     HTMLLIElement,
     React.LiHTMLAttributes<HTMLLIElement>
 >(({ className, ...props }, ref) => (
     <li ref={ref} className={cn(className)} {...props} />
-))
-StyleListItem.displayName = 'StyleListItem'
+));
+StyleListItem.displayName = 'StyleListItem';
 
 const StyleTable = React.forwardRef<
     HTMLTableElement,
     React.TableHTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
     <table ref={ref} className={cn('w-full', className)} {...props} />
-))
-StyleTable.displayName = 'StyleTable'
+));
+StyleTable.displayName = 'StyleTable';
 
 const StyleTableHead = React.forwardRef<
     HTMLTableSectionElement,
     React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
     <thead ref={ref} className={cn(className)} {...props} />
-))
-StyleTableHead.displayName = 'StyleTableHead'
+));
+StyleTableHead.displayName = 'StyleTableHead';
 
 const StyleTableBody = React.forwardRef<
     HTMLTableSectionElement,
     React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
     <tbody ref={ref} className={cn(className)} {...props} />
-))
-StyleTableBody.displayName = 'StyleTableBody'
+));
+StyleTableBody.displayName = 'StyleTableBody';
 
 const StyleTableRow = React.forwardRef<
     HTMLTableRowElement,
@@ -138,8 +138,8 @@ const StyleTableRow = React.forwardRef<
         className={cn('m-0 border-t p-0 even:bg-muted', className)}
         {...props}
     />
-))
-StyleTableRow.displayName = 'StyleTableRow'
+));
+StyleTableRow.displayName = 'StyleTableRow';
 
 const StyleTableHeadCell = React.forwardRef<
     HTMLTableCellElement,
@@ -149,12 +149,12 @@ const StyleTableHeadCell = React.forwardRef<
         ref={ref}
         className={cn(
             'border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleTableHeadCell.displayName = 'StyleTableHeadCell'
+));
+StyleTableHeadCell.displayName = 'StyleTableHeadCell';
 
 const StyleTableCell = React.forwardRef<
     HTMLTableCellElement,
@@ -164,12 +164,12 @@ const StyleTableCell = React.forwardRef<
         ref={ref}
         className={cn(
             'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleTableCell.displayName = 'StyleTableCell'
+));
+StyleTableCell.displayName = 'StyleTableCell';
 
 const StyleLink = React.forwardRef<
     HTMLAnchorElement,
@@ -179,12 +179,12 @@ const StyleLink = React.forwardRef<
         ref={ref}
         className={cn(
             'font-medium text-primary underline underline-offset-4',
-            className
+            className,
         )}
         {...props}
     />
-))
-StyleLink.displayName = 'StyleLink'
+));
+StyleLink.displayName = 'StyleLink';
 
 export {
     StyleH1,
@@ -202,4 +202,4 @@ export {
     StyleTableHeadCell,
     StyleTableCell,
     StyleLink,
-}
+};
