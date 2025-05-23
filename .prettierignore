@@ -1,6 +1,9 @@
 # ignore Tauri code
 src-tauri
 
+# ignore src's css
+src/App.css
+
 # Logs
 logs
 *.log
