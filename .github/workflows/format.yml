@@ -1,0 +1,43 @@
+name: Code formatting
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  format:
+    name: Format code
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run Prettier the formatter
+        run: |
+          npx prettier -v
+          npx prettier . -w --tab-width 4
+
+      # Copying from `lowlighter/metrics/blob/master/.github/workflows/ci.yml`
+      - name: Publish formatted code
+        run: |
+          set +e
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add --all
+          git commit -m "chore: run Prettier for auto code formatting"
+          git push
+          set -e 

@@ -1,8 +1,9 @@
 export default {
-    semi: false,
+    semi: true,
     singleQuote: true,
     printWidth: 80,
-    trailingComma: 'es5',
+    parser: 'typescript',
+    trailingComma: 'all',
     tabWidth: 4,
     useTabs: false,
-}
+};

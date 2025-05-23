@@ -1,3 +1,6 @@
+# ignore Tauri code
+src-tauri
+
 # Logs
 logs
 *.log
