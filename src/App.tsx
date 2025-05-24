@@ -6,6 +6,7 @@ import Mods from '@/pages/mods';
 import Songs from '@/pages/songs';
 import Tools from '@/pages/tools';
 import LoaderLogs from '@/pages/tools/loader-logs';
+import Settings from '@/pages/settings';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/tools" element={<Tools />} />
                 <Route path="/tools/loader-logs" element={<LoaderLogs />} />
+                <Route path="/settings" element={<Settings />} />
             </Routes>
         </RootLayout>
     );

@@ -27,7 +27,7 @@ const serverStatusNotifications: Notification[] = [
 function Home() {
     return (
         <>
-            <main id="containers" className="max-w-screen-xl mx-auto">
+            <main id="containers">
                 <StyleH3 className="mb-4">Hello, $user</StyleH3>
                 <div
                     id="pageContent"

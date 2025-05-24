@@ -10,8 +10,8 @@ function SidebarWrapper({ children }: SidebarWrapperProps) {
     return (
         <SidebarProvider>
             <AppSidebar />
-            <ScrollArea className="px-6 h-screen w-full flex flex-row flex-wrap justify-center items-center overflow-x-clip">
-                {children}
+            <ScrollArea className="flex h-screen w-full flex-row flex-wrap items-center justify-center overflow-x-clip px-6">
+                <div className="max-w-screen-xl mx-auto">{children}</div>
             </ScrollArea>
         </SidebarProvider>
     );
