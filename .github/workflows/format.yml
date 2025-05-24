@@ -13,13 +13,13 @@ on:
 jobs:
   format:
     name: Format code
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [20.x]
 
     steps:
       - name: Checkout Codebase
@@ -30,14 +30,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Run Prettier the formatter in ./src
+      - name: Run Prettier the formatter
         run: |
+          yarn install
           npx prettier -v
           npx prettier . -w
         continue-on-error: true
 
       # Copying from `lowlighter/metrics/blob/master/.github/workflows/ci.yml`
-      - name: Publish formatted code
+      - name: Commits formatted code
         run: |
           set +e
           git config user.name github-actions[bot]
