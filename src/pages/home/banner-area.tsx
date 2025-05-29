@@ -1,7 +1,5 @@
-import * as React from "react"
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel.tsx";
 import { Card, CardContent} from "@/components/ui/card.tsx";
-import react from "@vitejs/plugin-react";
 
 function BannerArea() {
     return(
@@ -9,7 +7,6 @@ function BannerArea() {
             <Carousel opts={{
                 align: "center",
                 loop: true,
-                interval: 1000,
             }}
             className="w-full max-w-4xl"
             >

@@ -1,30 +1,24 @@
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import NotifyItems from "@/components/notify-items.tsx";
+import {Card, CardDescription, CardHeader, CardTitle} from "@/components/ui/card.tsx";
+import CardLauncher from "@/pages/home/content/card-launcher.tsx";
+import CardStatus from "@/pages/home/content/card-status.tsx";
+import CardInfo, {InfoItem} from "@/pages/home/content/card-info.tsx";
+
+const mockInfoItems: InfoItem[] = [
+    {
+        title: "Modloader Version",
+        content: "$modloader_ver",
+        description: "just a quick ways to check the loader."
+    }
+]
 
 function CardArea() {
-    return(
+    return (
         <div
             id="pageContent"
             className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4"
         >
-            <Card className="break-inside-avoid">
-                <CardHeader>
-                    <CardTitle>Start Game</CardTitle>
-                    <CardDescription>
-                        $status_text (varies when game is detected or
-                        not)
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <Button variant="default" className="w-full">
-                        Start Game via Steam
-                    </Button>
-                    <Button variant="secondary" className="w-full">
-                        Start Game without Mods
-                    </Button>
-                </CardContent>
-            </Card>
+            <CardLauncher/>
+            <CardInfo infoItems={mockInfoItems}/>
             <Card className="break-inside-avoid">
                 <CardHeader>
                     <CardDescription>Modloader Version</CardDescription>
@@ -60,19 +54,7 @@ function CardArea() {
                     </CardTitle>
                 </CardHeader>
             </Card>
-            <Card className="break-inside-avoid">
-                <CardHeader>
-                    <CardTitle>Server Status</CardTitle>
-                    <CardDescription>
-                        a neat place to check our server's status.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <NotifyItems
-                        notifications={serverStatusNotifications}
-                    />
-                </CardContent>
-            </Card>
+            <CardStatus/>
         </div>
     )
 }
