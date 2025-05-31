@@ -1,4 +1,4 @@
-interface Notification {
+export interface Notification {
     title: string;
     description: string;
     status: 'success' | 'error' | 'working' | 'info';
