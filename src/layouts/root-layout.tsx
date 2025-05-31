@@ -11,7 +11,7 @@ function SidebarWrapper({ children }: SidebarWrapperProps) {
         <SidebarProvider>
             <AppSidebar />
             <ScrollArea className="flex h-screen w-full flex-row flex-wrap items-center justify-center overflow-x-clip px-6">
-                <div className="max-w-screen-xl mx-auto">{children}</div>
+                <div className="max-w-screen-xl mx-auto pb-4">{children}</div>
             </ScrollArea>
         </SidebarProvider>
     );

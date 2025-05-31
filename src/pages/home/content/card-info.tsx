@@ -16,9 +16,9 @@ function CardInfos({ infoItems }: InfoItems) {
             {infoItems.map((item: InfoItem) => (
                 <Card className="break-inside-avoid">
                     <CardHeader>
-                        <div className="gap-0">
-                            <CardDescription className="text-black">{item.title}</CardDescription>
-                            <CardDescription className="-mt-0.5">{item.description}</CardDescription>
+                        <div>
+                            <CardTitle>{item.title}</CardTitle>
+                            <CardDescription>{item.description}</CardDescription>
                         </div>
                         <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
                             {item.content}
