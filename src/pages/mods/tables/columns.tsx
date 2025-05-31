@@ -40,11 +40,11 @@ export const columns: ColumnDef<Mods>[] = [
         header: () => <div className="font-bold">Mods</div>,
         cell: ({ row }) => {
             const rowData = row.original;
-            const modDisplayName: String = rowData.name;
-            const modID: String = rowData.id;
+            const modDisplayName: string = rowData.name;
+            const modID: string = rowData.id;
 
             return (
-                <div id="mod-nameplate-container" className="h-12 mb-2">
+                <div id="mod-nameplate-container" className="mb-2 h-12">
                     <div className="text-2xl">{modDisplayName}</div>
                     <div className="text-sm">{modID}</div>
                 </div>

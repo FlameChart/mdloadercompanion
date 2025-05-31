@@ -1,4 +1,9 @@
-import {Card, CardDescription, CardHeader, CardTitle} from "@/components/ui/card.tsx";
+import {
+    Card,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card.tsx';
 
 export interface InfoItem {
     title: string;
@@ -18,16 +23,18 @@ function CardInfos({ infoItems }: InfoItems) {
                     <CardHeader>
                         <div>
                             <CardTitle>{item.title}</CardTitle>
-                            <CardDescription>{item.description}</CardDescription>
+                            <CardDescription>
+                                {item.description}
+                            </CardDescription>
                         </div>
-                        <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+                        <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
                             {item.content}
                         </CardTitle>
                     </CardHeader>
                 </Card>
             ))}
         </>
-    )
+    );
 }
 
-export default  CardInfos;
+export default CardInfos;

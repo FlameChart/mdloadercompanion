@@ -5,10 +5,10 @@ export default {
     tabWidth: 4,
     useTabs: false,
     plugins: [
-        "prettier-plugin-toml",
-        "prettier-plugin-organize-attributes",
-        "prettier-plugin-packagejson",
-        "prettier-plugin-tailwindcss"
+        'prettier-plugin-toml',
+        'prettier-plugin-organize-attributes',
+        'prettier-plugin-packagejson',
+        'prettier-plugin-tailwindcss',
     ],
-    tailwindStylesheet: "./src/App.css"
+    tailwindStylesheet: './src/App.css',
 };

@@ -1,5 +1,11 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card.tsx";
-import NotifyItems, {Notification} from "@/components/notify-items.tsx";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card.tsx';
+import NotifyItems, { Notification } from '@/components/notify-items.tsx';
 
 const serverStatusNotifications: Notification[] = [
     {
@@ -7,8 +13,8 @@ const serverStatusNotifications: Notification[] = [
         title: "MDMC's Headquarter",
         description: 'checking...',
     },
-    {status: 'error', title: 'Discord Login', description: 'checking...'},
-    {status: 'info', title: 'Gitee Updater', description: 'checking...'},
+    { status: 'error', title: 'Discord Login', description: 'checking...' },
+    { status: 'info', title: 'Gitee Updater', description: 'checking...' },
     {
         status: 'success',
         title: 'GitHub DataSource',
@@ -26,12 +32,10 @@ function CardStatus() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <NotifyItems
-                    notifications={serverStatusNotifications}
-                />
+                <NotifyItems notifications={serverStatusNotifications} />
             </CardContent>
         </Card>
-    )
+    );
 }
 
-export default  CardStatus;
+export default CardStatus;

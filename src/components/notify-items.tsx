@@ -36,7 +36,7 @@ function NotifyItems({ notifications }: NotifyItemsProps) {
                         )}`}
                     />
                     <div className="space-y-1">
-                        <p className="text-sm font-medium leading-none">
+                        <p className="text-sm leading-none font-medium">
                             {notification.title}
                         </p>
                         <p className="text-sm text-muted-foreground">
